@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     }
 
     const { error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'HN Web Technologies <hello@hnwebtechnologies.com>',
       to: ['hello@hnwebtechnologies.com'],
       subject: `New Lead: ${name} - HN Web Technologies`,
       html: `
