@@ -71,12 +71,37 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Schema definition for Google's AI Knowledge Graph
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HN Web Technologies",
+    "alternateName": "HN Web Tech",
+    "url": "https://hnwebtechnologies.com",
+    "logo": "https://hnwebtechnologies.com/logo.png", // Update if your logo filename/path is different
+    "description": "Premium website development, e-commerce solutions, and custom web applications based in Mysore, Karnataka.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mysore",
+      "addressRegion": "Karnataka",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/hn-web-technologies" // Add your social links here when available
+    ]
+  };
+
   return (
     <html
       lang="en"
       className={`${inter.variable} ${outfit.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)] selection:bg-[var(--accent-gold)] selection:text-black">
+        {/* Injects schema data directly into the DOM */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+        />
         <Navbar />
         <main className="flex-grow pt-20">
           {children}
