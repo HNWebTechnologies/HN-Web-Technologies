@@ -74,12 +74,13 @@ export default function RootLayout({
   // Schema definition for Google's AI Knowledge Graph
   const schemaMarkup = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
     "name": "HN Web Technologies",
     "alternateName": "HN Web Tech",
     "url": "https://hnwebtechnologies.com",
-    "logo": "https://hnwebtechnologies.com/logo.png", // Update if your logo filename/path is different
-    "description": "Premium website development, e-commerce solutions, and custom web applications based in Mysore, Karnataka.",
+    "logo": "https://hnwebtechnologies.com/logo.png",
+    "image": "https://hnwebtechnologies.com/logo.png", 
+    "description": "Premium website development, e-commerce solutions, and custom web applications. We build digital solutions that drive real results. Based in Mysore.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Mysore",
@@ -87,7 +88,7 @@ export default function RootLayout({
       "addressCountry": "IN"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/hn-web-technologies" // Add your social links here when available
+      "https://www.linkedin.com/company/hn-web-technologies"
     ]
   };
 
@@ -97,7 +98,6 @@ export default function RootLayout({
       className={`${inter.variable} ${outfit.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)] selection:bg-[var(--accent-gold)] selection:text-black">
-        {/* Injects schema data directly into the DOM */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
