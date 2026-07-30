@@ -16,7 +16,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hnwebtechnologies.com"),
+  // Updated to include www to match Google's indexed canonical URL
+  metadataBase: new URL("https://www.hnwebtechnologies.com"),
   title: {
     default: "HN Web Technologies | Professional Website & Mobile App Development",
     template: "%s | HN Web Technologies",
@@ -43,8 +44,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HN Web Technologies | Professional Website & Mobile App Development",
     description: "Premium website development, e-commerce solutions, and custom web applications. We build digital solutions that drive real results. Based in Mysore.",
-    url: "https://hnwebtechnologies.com",
+    url: "https://www.hnwebtechnologies.com",
     siteName: "HN Web Technologies",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "HN Web Technologies",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -52,6 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "HN Web Technologies | Professional Website & Mobile App Development",
     description: "Premium website development, e-commerce solutions, and custom web applications. We build digital solutions that drive real results.",
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -71,15 +81,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Schema definition for Google's AI Knowledge Graph
+  // Schema definition for Google's AI Knowledge Graph (Updated with www)
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "HN Web Technologies",
     "alternateName": "HN Web Tech",
-    "url": "https://hnwebtechnologies.com",
-    "logo": "https://hnwebtechnologies.com/logo.png",
-    "image": "https://hnwebtechnologies.com/logo.png", 
+    "url": "https://www.hnwebtechnologies.com",
+    "logo": "https://www.hnwebtechnologies.com/logo.png",
+    "image": "https://www.hnwebtechnologies.com/logo.png", 
     "description": "Premium website development, e-commerce solutions, and custom web applications. We build digital solutions that drive real results. Based in Mysore.",
     "address": {
       "@type": "PostalAddress",
