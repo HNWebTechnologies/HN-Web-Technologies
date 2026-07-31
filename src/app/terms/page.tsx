@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Terms & Conditions",
   description: "Read the Terms and Conditions for HN Web Technologies to understand our rules and regulations.",
   alternates: {
-    canonical: "/terms",
+    canonical: "https://www.hnwebtechnologies.com/terms",
   },
 };
 

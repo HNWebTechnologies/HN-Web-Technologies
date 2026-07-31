@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Read the Privacy Policy for HN Web Technologies to understand how we collect and use your data.",
   alternates: {
-    canonical: "/privacy",
+    canonical: "https://www.hnwebtechnologies.com/privacy",
   },
 };
 
