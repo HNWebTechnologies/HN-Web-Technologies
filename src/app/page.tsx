@@ -15,9 +15,9 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "HN Web Technologies",
-    "image": "https://hnwebtechnologies.com/twitter-image.jpg",
+    "image": "https://www.hnwebtechnologies.com/twitter-image.jpg",
     "description": "Premium website development, e-commerce solutions, and custom web applications. We build digital solutions that drive real results. Based in Mysore.",
-    "url": "https://hnwebtechnologies.com",
+    "url": "https://www.hnwebtechnologies.com",
     "telephone": "+918088738224",
     "email": "hello@hnwebtechnologies.com",
     "address": {
