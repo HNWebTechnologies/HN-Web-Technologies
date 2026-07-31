@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Refund Policy",
   description: "Read the Refund Policy for HN Web Technologies to understand our rules and regulations.",
   alternates: {
-    canonical: "/refund",
+    canonical: "https://www.hnwebtechnologies.com/refund",
   },
 };
 
