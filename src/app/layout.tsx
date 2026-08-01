@@ -6,13 +6,17 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppWidget from "@/components/ui/WhatsAppWidget";
 
 const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,
 });
 
 const outfit = Outfit({
-  variable: "--font-outfit",
   subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
