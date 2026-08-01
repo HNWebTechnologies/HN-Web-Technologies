@@ -64,7 +64,7 @@ export default function FeaturesSection() {
                 {feature.icon}
               </div>
               <div>
-                <h4 className="text-white text-sm font-bold tracking-wider">{feature.title}</h4>
+                <h3 className="text-white text-sm font-bold tracking-wider">{feature.title}</h3>
                 <p className="text-[var(--muted-foreground)] text-xs">{feature.description}</p>
               </div>
             </motion.div>
