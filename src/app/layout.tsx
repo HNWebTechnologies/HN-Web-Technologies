@@ -16,7 +16,6 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  // Updated to include www to match Google's indexed canonical URL
   metadataBase: new URL("https://www.hnwebtechnologies.com"),
   title: {
     default: "HN Web Technologies | Professional Website & Mobile App Development",
@@ -36,6 +35,10 @@ export const metadata: Metadata = {
   authors: [{ name: "HN Web Technologies" }],
   creator: "HN Web Technologies",
   publisher: "HN Web Technologies",
+  // Canonical URL — prevents duplicate content across www/non-www
+  alternates: {
+    canonical: "https://www.hnwebtechnologies.com",
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -81,7 +84,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Schema definition for Google's AI Knowledge Graph (Updated with www)
+  // Single comprehensive LocalBusiness schema — merged from duplicate blocks
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -89,8 +92,11 @@ export default function RootLayout({
     "alternateName": "HN Web Tech",
     "url": "https://www.hnwebtechnologies.com",
     "logo": "https://www.hnwebtechnologies.com/logo.png",
-    "image": "https://www.hnwebtechnologies.com/logo.png", 
+    "image": "https://www.hnwebtechnologies.com/logo.png",
     "description": "Premium website development, e-commerce solutions, and custom web applications. We build digital solutions that drive real results. Based in Mysore.",
+    "telephone": "+918088738224",
+    "email": "hello@hnwebtechnologies.com",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Mysore",
@@ -98,7 +104,8 @@ export default function RootLayout({
       "addressCountry": "IN"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/hn-web-technologies"
+      "https://www.linkedin.com/company/hn-web-technologies",
+      "https://www.instagram.com/hnwebtechnologies"
     ]
   };
 
