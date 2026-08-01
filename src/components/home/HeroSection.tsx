@@ -22,11 +22,19 @@ export default function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8 flex justify-center"
         >
-          {/* Crown/Swoosh representation - using text/css for now, can be replaced with actual image */}
+          {/* Logo with priority loading for LCP optimization */}
           <div className="relative group cursor-pointer">
             <div className="absolute -inset-2 bg-gradient-to-r from-[var(--primary)] to-[var(--accent-gold)] rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative h-32 w-32 rounded-full overflow-hidden flex items-center justify-center shadow-[0_0_30px_rgba(212,175,55,0.3)] bg-[#0A0F1C]">
-               <Image src="/logo.png" alt="HN Web Technologies Logo" width={128} height={128} className="w-full h-full object-cover" />
+               <Image
+                 src="/logo.png"
+                 alt="HN Web Technologies Logo"
+                 width={128}
+                 height={128}
+                 priority
+                 fetchPriority="high"
+                 className="w-full h-full object-cover"
+               />
             </div>
           </div>
         </motion.div>
@@ -83,11 +91,11 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-12 flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-base font-medium text-[var(--muted-foreground)]"
         >
-          <span className="flex items-center gap-2"><span className="text-[var(--accent-gold)]">✓</span> Mobile Responsive</span>
-          <span className="flex items-center gap-2"><span className="text-[var(--accent-gold)]">✓</span> SEO Optimized</span>
-          <span className="flex items-center gap-2"><span className="text-[var(--accent-gold)]">✓</span> Fast Delivery</span>
-          <span className="flex items-center gap-2"><span className="text-[var(--accent-gold)]">✓</span> Affordable Pricing</span>
-          <span className="flex items-center gap-2"><span className="text-[var(--accent-gold)]">✓</span> Ongoing Support</span>
+          <span className="flex items-center gap-2"><span className="text-[var(--accent-gold)]">âœ¦</span> Mobile Responsive</span>
+          <span className="flex items-center gap-2"><span className="text-[var(--accent-gold)]">âœ¦</span> SEO Optimized</span>
+          <span className="flex items-center gap-2"><span className="text-[var(--accent-gold)]">âœ¦</span> Fast Delivery</span>
+          <span className="flex items-center gap-2"><span className="text-[var(--accent-gold)]">âœ¦</span> Affordable Pricing</span>
+          <span className="flex items-center gap-2"><span className="text-[var(--accent-gold)]">âœ¦</span> Ongoing Support</span>
         </motion.div>
       </div>
     </section>
