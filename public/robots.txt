@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Host: https://www.hnwebtechnologies.com
+Sitemap: https://www.hnwebtechnologies.com/sitemap.xml
